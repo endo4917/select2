@@ -1,0 +1,2 @@
+class KensasController < ApplicationController
+end

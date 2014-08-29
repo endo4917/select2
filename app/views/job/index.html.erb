@@ -1,0 +1,19 @@
+<h2> 医学通信社からのお仕事 </h2>
+
+<h3>検査を選択</h3>
+<p>
+<% if @kensas.size == 0 %>
+全件から選択
+<% else %>
+作業中の検査から選択
+<% end %>
+</p>
+<p>
+  <input type="text" class="datepicker" />
+</p>
+<%= form_tag(url: root_url) do %>
+  <%= submit_tag "選択" %>
+  <%= select_tag "kensas", class: "e1" %>
+
+  <input type="hidden" id="ajax-example" style="width:50%" />
+<% end %>
